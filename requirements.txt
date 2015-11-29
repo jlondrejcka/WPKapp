@@ -4,7 +4,7 @@ South==1.0.2
 django-toolbelt==0.0.1
 static3==0.5.1
 wsgiref==0.1.2
-PostgreSQL-python==9.5
+PostgreSQL-python==9.3
 
 py-authorize==1.2.2.3
 # 1.2.3.0
