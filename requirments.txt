@@ -1,4 +1,4 @@
-Django==1.6.10
+Django==1.8
 South==1.0.2
 
 PostgreSQL-python==9.5
