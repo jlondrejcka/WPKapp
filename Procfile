@@ -1,1 +1,1 @@
-web: python main.py runserver
+web: gunicorn WodApp.wsgi --log-file -
