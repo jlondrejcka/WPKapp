@@ -1,1 +1,1 @@
-web: gunicorn WodApp.wsgi --log-file -
+web: python manage.py run_gunicorn
