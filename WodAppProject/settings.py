@@ -111,6 +111,6 @@ STATIC_ROOT = 'staticfiles'
 MEDIA_ROOT = '/WodApp/media/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'WodApp/static'),
+    os.path.join(BASE_DIR, './WodApp/static'),
 )
 
