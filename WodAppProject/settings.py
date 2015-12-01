@@ -107,7 +107,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/WodApp/static/'
-STATIC_ROOT = '/WodApp/'
+STATIC_ROOT = 'static'
 MEDIA_ROOT = '/WodApp/media/'
 
 STATICFILES_DIRS = (
