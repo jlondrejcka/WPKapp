@@ -25,7 +25,7 @@ SECRET_KEY = '@kx080aaip^#ag-ar#2005ug%cvw@x_+1zwl8r1miuvfz#)501'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -79,7 +79,6 @@ WSGI_APPLICATION = 'WodAppProject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -90,8 +89,6 @@ DATABASES = {
         'PORT': '',
     }
 }
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
@@ -110,6 +107,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = 'staticfiles'
 MEDIA_ROOT = '/WodApp/media/'
-STATIC_ROOT = '/WodApp/static'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
