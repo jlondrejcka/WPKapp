@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        {% load staticfiles %}
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>REVSELLER - Login Page</title>
 
         <!-- Bootstrap framework -->
-            <link rel="stylesheet" href="../../static/admin/bootstrap/css/bootstrap.min.css" />
-            <link rel="stylesheet" href="../../static/admin/bootstrap/css/bootstrap-responsive.min.css" />
+            <link rel="stylesheet" href=" {% static "admin/bootstrap/css/bootstrap.min.css" %}" />
+            <link rel="stylesheet" href=" {% static "admin/bootstrap/css/bootstrap-responsive.min.css" %}" />
         <!-- theme color-->
-            <link rel="stylesheet" href="../../static/admin/css/blue.css" />
-        <!-- tooltip -->
-			<link rel="stylesheet" href="../../static/admin/lib/qtip2/jquery.qtip.min.css" />
+            <link rel="stylesheet" href=" {% static "admin/css/blue.css" %}" />
         <!-- main styles -->
-            <link rel="stylesheet" href="../../static/admin/css/style.css" />
+            <link rel="stylesheet" href=" {% static "admin/css/style.css" %}" />
 
         <!-- Favicons and the like (avoid using transparent .png) -->
             <link rel="shortcut icon" href="favicon.ico" />
@@ -147,10 +147,9 @@
 			<span class="linkform" style="display:none"><a href="#pass_form">Forgot password?</a></span>
 			<span class="linkform">Never mind, <a href="#login_form">send me back to the sign-in screen</a></span>
 		</div>
-
         <script src="../../static/admin/js/jquery.min.js"></script>
         <script src="../../static/admin/js/jquery.actual.min.js"></script>
-        <script src="../../static/admin/lib/validation/jquery.validate.min.js"></script>
+        <script src="../../static/admin/js/jquery.validate.min.js"></script>
 		<script src="../../static/admin/bootstrap/js/bootstrap.min.js"></script>
         <script>
 			base_url="";
