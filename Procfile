@@ -1,1 +1,1 @@
-web: gunicorn WodAppProject.wsgi --log-file -
+web: gunicorn WPKapp.wsgi --log-file -

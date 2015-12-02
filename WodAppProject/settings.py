@@ -114,11 +114,3 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-#STATIC_ROOT = 'static'
-#STATIC_URL = '/static/'
-MEDIA_ROOT = '/WodApp/media/'
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-#STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, '/WodApp/static/'),
-#)
-
