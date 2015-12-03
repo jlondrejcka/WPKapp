@@ -26,10 +26,6 @@
 		.js .tab-pane {display:block !important}
 		.js .hide {display: inherit}
 
-
-	/* external links
-		.external_link {background: url(../img/external_link.png) no-repeat right center;padding-right:12px} */
-
 	/* main headings*/
 		.heading {border-bottom: 1px solid #dcdcdc;margin-bottom: 18px;padding-bottom: 5px}
 		.heading h1,.heading h2,.heading h3,h1.heading,h2.heading,h3.heading,.modal-header h3 {font-family: 'PT Sans', sans-serif;font-weight:400}
