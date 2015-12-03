@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}{{ block.super }}Home{% endblock title %}
+
+{% block navbar-registration %}
+  {% include "navbar_registration.html" %}
+{% endblock %}
+
+{% block container %}
+    <img class="img-responsive" src=" {% static 'admin/img/banner.png' %}" alt="Chania" width="1600" height="900">
+{% endblock container %}
+
