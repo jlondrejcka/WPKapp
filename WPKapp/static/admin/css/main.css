@@ -603,7 +603,6 @@
 		.antiscroll-scrollbar-vertical{width:7px;margin:2px 0;left:2px;top:0}
 		.antiscroll-inner{overflow-y:scroll}
 		.antiScroll,.antiscroll-content,.antiscroll-inner{width:240px}
-		.antiscroll-inner::-webkit-scrollbar,.antiscroll-inner::scrollbar{width:0;height:0}
 
 
 	/* sortable elements */
