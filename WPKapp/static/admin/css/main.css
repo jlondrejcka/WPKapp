@@ -1123,3 +1123,113 @@ width:200px;
 	border: 3px solid #1a3e7b;
 	color: #1a3e7b;
 }
+@font-face {
+    font-family: tahoma;
+    src: url(../fontstahoma.ttf);
+}
+
+a,h1,h2,h3,h4,h5,p{font-family:tahoma !important;}
+.navbar-inverse{
+	background:#fff !important;
+	border:none;
+	}
+.no-padding{padding:0px;}
+.border-bottom{border-bottom:solid 1px #e1e1e1;}
+.logo img{
+	width:70%;
+}
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-right{text-align:right;}
+.no-margin{margin:0px;}
+.f-w{font-weight:bold;}
+.tryfree{
+	background:#008a00;
+	color:#fff;
+	text-align:center;
+	border:none;
+	font-size:12px;
+	padding:6px 12px;
+}
+.m-t-10{margin-top:10px;}
+.m-t-20{margin-top:20px;}
+.m-t-40{margin-top:40px;}
+.light-gray{color:#a0a0a0;}
+.dark-gray{color:#444;}
+.fs-14{font-size:14px;}
+.fs-16{font-size:16px;}
+.blue{color:#00a6ff;}
+.product li{list-style-type:none; padding:8px 0px;}
+.p-r-15{padding-right:15px;}
+.pricing-sec{
+background:#00a6ff; margin-top:60px;
+}
+.white{color:#fff;}
+.m-t-60{margin-top:60px;}
+.try_it_fri{
+border-radius:3px;
+padding:10px 20px;
+text-align:center;
+	border:none;
+	font-size:12px;
+	background:none !important;
+	border:solid 1px #c6c6c6;
+}
+.free_trail{
+background:#fff;height:200px; border-radius:5px; padding-top:25px;
+}
+.tips{
+	background:#f2f2f1;
+	padding:40px 0;
+}
+.Frequently{
+	background:#fff;
+	padding:40px 0;
+}
+.accordion-heading{
+	padding:10px;
+}
+.accordion-toggle{
+	display:block !important;
+	text-decoration:none !important;
+}
+ .accordion-body{
+	padding:10px !important;
+	background:#fff !important;
+	margin-bottom:20px !important;
+ }
+
+ .b-r-0{border-radius:0px !important;}
+ .send_message{
+	background:#008a00;
+	color:#fff;
+	text-align:center;
+	border-radius:3px;
+	width:100%;
+	}
+footer{
+background:#475a65; height:60px;
+color:#fff; line-height:60px;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{color:#333;}
+.fixed_header{
+position: fixed;
+    z-index: 9999999;
+    top: 0px;
+    text-align: center;
+    width: 100%;
+    border-bottom: solid 1px #CECDCD;}
+.try_it_fri:hover{
+	background:#00A6FF !important;
+	color:#fff !important;
+}
+.spacing{ padding-top: 50px;
+    padding-bottom: 90px;}
+
+.video_player{
+       width: 44.3%;
+		position: absolute;
+		top: 25.3%;
+		left: 28.1%;
+}
