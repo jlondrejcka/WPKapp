@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+    <body>
+        <title>
+            {% block title %}{% include "_brandname.html" %} :: {% endblock %}
+        </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <link href="{% static 'admin/css/style1.css' %}" rel="stylesheet" type="text/css" />
+
+        {% block navbar %}
+            <nav class="navbar navbar-inverse fixed_header">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="background:#444;">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand logo" href="{% url 'home' %}"><img src="{% static 'admin/img/logo.png' %}" /></a>
+                    </div>
+                    {% block navbar-menu %}
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav navbar-right">
+                                {% block navbar-registration %}
+                                {% endblock %}
+                                {% block navbar-right %}
+                                    {% if user.is_authenticated %}
+                                        {% if user.is_staff %}
+                                            <li><a href="{% url 'admin:index' %}">Admin</a></li>
+                                        {% endif %}
+                                        <li>
+                                            <a href="#" data-toggle="dropdown">
+                                                {{ user.get_full_name|default:user.username }}
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="{% url 'logout' %}">Profile</a></li>
+                                                <li><a href="{% url 'logout' %}">Terms/Conditions</a></li>
+                                                <li><a href="{% url 'logout' %}">Help</a></li>
+                                                <li><a href="{% url 'logout' %}">Logout</a></li>
+                                            </ul>
+                                        </li>
+                                    {% endif %}
+                                {% endblock %}
+                            </ul>
+                        </div>
+                    {% endblock %}
+                </div>
+            </nav>
+        {% endblock navbar %}
+
+        <div class="container" >
+            {% block container %}
+            {% endblock container %}
+        </div>
+        <!-- Site footer -->
+        {% block footer %}
+            <!-- Some social button for contact will do -->
+            <a name="contact"></a>
+            <div class="container">
+                <div class="footer">
+            <div class="row">
+              <div class="col-lg-6">
+                  <p>&copy; Company {% now 'Y' %}</p>
+              </div>
+              <div class="col-lg-6 text-right">
+                Connect with us on
+                <a href="#"><i class="fa fa-facebook"></i> Facebook</a> or
+                <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+              </div>
+            </div>
+                </div>
+            </div>
+        {% endblock %}
+
+        {% block scripts %}
+            <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+            <script src="{% static 'admin/bootstrap/js/bootstrap.min.js' %}"></script>
+        {% endblock scripts %}
+    </body>
+</html>
