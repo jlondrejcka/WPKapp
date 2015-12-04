@@ -2187,7 +2187,7 @@
 		cursor: default;
 		font-size: 0.8em;
 		left: 0;
-		padding: 1em 1.5em;
+		padding: 2em 1.5em;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -2393,14 +2393,15 @@
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: #645862;
-		background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../../images/banner.png");
-		background-position: bottom left, bottom right, top left, top center;
-		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-		background-size: 25em, 25em, auto, cover;
+		background-image: url("../../images/banner.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 		color: #fff;
 		cursor: default;
 		padding: 6em 0;
 		text-align: center;
+		height: 100%;
 	}
 
 		#banner .inner {
