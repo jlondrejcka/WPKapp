@@ -13,24 +13,10 @@
 	<body class="index">
 		<div id="page-wrapper">
 			<!-- Header -->
-            <header id="header" class="alt">
-<!--
-                <h1 id="logo">
-                    <a href="{% url 'home' %}"><img src="{% static "images/logo.png" %}" /></a>
-                </h1>
--->
-                <nav id="nav">
-                    <ul>
-                        {% block navbar %}
-                            <li class="current"><a href="{% url 'home' %}">Welcome</a></li>
-                            <!--<li><a href="#" class="button special">Log In</a></li>-->
-                            <li class="current"><a href="{% url 'login' %}">Log In</a></li>
-                            <li class="current"><a href="{% url 'signup' %}">Sign Up</a></li>
-                        {% endblock %}
-                    </ul>
-                </nav>
-            </header>
+            {% block navbar %}
+            {% endblock %}
         <!-- Banner -->
+        {% block container %}
             <section id="banner">
                 <!--
                     ".inner" is set up as an inline-block so it automatically expands
@@ -187,7 +173,6 @@
 
         <!-- CTA -->
             <section id="cta">
-
                 <header>
                     <h2>Ready to do <strong>something</strong>?</h2>
                     <p>Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.</p>
@@ -213,7 +198,9 @@
                     <li>&copy; Untitled</li><li>Design: <a href="#">WOD</a></li>
                 </ul>
             </footer>
+        {% endblock %}
 		</div>
+
 
 		<!-- Scripts -->
         <script src=" {% static "assets/js/jquery.min.js" %}"></script>

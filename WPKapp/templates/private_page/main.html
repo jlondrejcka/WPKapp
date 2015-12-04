@@ -4,10 +4,15 @@
 
 {% block title %}{{ block.super }}Welcome{% endblock title %}
 
-{% block navbar-registration %}
-  {% include "navbar_main.html" %}
+{% block navbar %}
+    <header id="header" class="alt">
+        <nav id="nav">
+            <ul>
+                {% include "navbar_main.html" %}
+            </ul>
+        </nav>
+    </header>
 {% endblock %}
 
-{% block container %}
-{% endblock container %}
+
 

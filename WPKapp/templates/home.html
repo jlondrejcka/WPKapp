@@ -4,13 +4,18 @@
 
 {% block title %}{{ block.super }}Home{% endblock title %}
 
-{% block navbar-registration %}
-  {% include "navbar_registration.html" %}
+{% block navbar %}
+    <header id="header" class="alt">
+        <nav id="nav">
+            <ul>
+                <li class="current"><a href="{% url 'home' %}">Welcome</a></li>
+                <!--<li><a href="#" class="button special">Log In</a></li>-->
+                <li class="current"><a href="{% url 'login' %}">Log In</a></li>
+                <li class="current"><a href="{% url 'signup' %}">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
 {% endblock %}
 
-{% block container %}
-    <div class="main_image">
-        <img class="img-responsive" src=" {% static 'images/banner.png' %}" alt="Chania" width="100%" height="100%">
-    </div>
-{% endblock container %}
+
 

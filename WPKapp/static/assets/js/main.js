@@ -5,7 +5,6 @@
 */
 
 (function($) {
-
 	skel.breakpoints({
 		wide: '(max-width: 1680px)',
 		normal: '(max-width: 1280px)',
@@ -15,7 +14,6 @@
 	});
 
 	$(function() {
-
 		var	$window = $(window),
 			$body = $('body'),
 			$header = $('#header'),
@@ -23,7 +21,6 @@
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
-
 			$window.on('load', function() {
 				$body.removeClass('is-loading');
 			});
@@ -98,9 +95,7 @@
 			if (!skel.vars.mobile
 			&&	$header.hasClass('alt')
 			&&	$banner.length > 0) {
-
 				$window.on('load', function() {
-
 					$banner.scrollwatch({
 						delay:		0,
 						range:		1,
@@ -108,11 +103,7 @@
 						on:			function() { $header.addClass('alt reveal'); },
 						off:		function() { $header.removeClass('alt'); }
 					});
-
 				});
-
 			}
-
 	});
-
 })(jQuery);

@@ -47,27 +47,26 @@ def signup(request):
 @csrf_protect
 def login(request):
     if request.method == 'POST':
-        form = RegistrationForm(request.POST)
-        bRegister = request.POST.get('IsRegister', '')
-        if bRegister == "Register":
-            return signup(request)
+        bRegisterOption = request.POST.get('register_option', '')
 
-        username = request.POST.get('username', '')
-        password = request.POST.get('password1', '')
-        user = auth.authenticate(username = username, password = password)
+        if bRegisterOption == "Register":
+            return signup(request)
+        elif bRegisterOption == "ResetPassword":
+            return ResetPassword(request)
+
+        Username = request.POST.get('username', '')
+        Password = request.POST.get('password1', '')
+        user = auth.authenticate(username = Username, password = Password)
         if user is not None and user.is_active:
             # Correct password, and the user is marked "active"
             auth.login(request, user)
             # Redirect to a success page.
-            print("bbbbbbbbbbbb")
-            return HttpResponseRedirect("/register/loggedin/")
+            return HttpResponseRedirect("/login/success/")
         else:
             # Show an error page
-            print("sdfsdfsssss")
             messages.add_message(request, messages.INFO, "Unable login! " "Check username/password")
     else:
         form = LoginForm()
-        print("aaaaaaaaaaaaaa")
         variables = RequestContext(request, {
         'form': form
         })
@@ -76,9 +75,35 @@ def login(request):
 
 @csrf_protect
 def register_success(request):
-    return render(request, 'registration/success.html')
+    return render(request, 'private_page/main.html')
 
 @csrf_protect
 def logout_page(request):
     logout(request)
     return HttpResponseRedirect('/')
+
+
+@login_required
+def main(request):
+    return render(request, 'private_page/main.html')
+
+@csrf_protect
+def ResetPassword(request):
+    if request.method == 'POST':
+        print("1111111111111")
+        form = PassworResetForm(request.POST)
+        print("22222222222222222222")
+        if form.is_valid():
+            print("333333333333333333333")
+            return HttpResponseRedirect('/register/success')
+        else:
+            messages.add_message(request,
+                     messages.ERROR,
+                     "Unable ResetPassword! "
+                     "Check your Email")
+
+    variables = RequestContext(request, {
+    'form': form
+    })
+
+    return render(request, 'private_page/main.html')
