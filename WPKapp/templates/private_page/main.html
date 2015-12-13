@@ -2,17 +2,35 @@
 
 {% load staticfiles %}
 
-{% block title %}{{ block.super }}Welcome{% endblock title %}
-
-{% block navbar %}
-    <header id="header" class="alt">
+{% block navbar_menu %}
+    <header id="header" class="main_nav">
         <nav id="nav">
             <ul>
                 {% include "navbar_main.html" %}
+                {% if user.is_authenticated %}
+                    {% if user.is_staff %}
+                        <li><a href="{% url 'admin:index' %}">Admin</a></li>
+                    {% endif %}
+                    <li>
+                        <a href="#" data-toggle="dropdown">
+                            {{ user.get_full_name|default:user.username }}
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{% url 'logout' %}">Profile</a></li>
+                            <li><a href="{% url 'logout' %}">Terms/Conditions</a></li>
+                            <li><a href="{% url 'logout' %}">Help</a></li>
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                        </ul>
+                    </li>
+                {% endif %}
             </ul>
         </nav>
     </header>
 {% endblock %}
+{% block navbar_logged_user %}
 
+{% endblock %}
 
-
+{% block container %}
+{% endblock %}

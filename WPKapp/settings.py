@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 import os
-import dj_database_url
+#import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +25,7 @@ SECRET_KEY = "izp0ag^k%gugv^5ci8s-ipt&@-2yx1)ti(n!+ttoz0)$=vex#d"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+
 
 
 # Application definition
@@ -71,7 +71,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'WPKapp.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
@@ -96,13 +95,13 @@ USE_L10N = True
 USE_TZ = True
 
 # Parse database configuration from $DATABASE_URL
-DATABASES['default'] = dj_database_url.config()
+#DATABASES['default'] = dj_database_url.config()
 
 # Enable Persistent Connections
-DATABASES['default']['CONN_MAX_AGE'] = 500
+#DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # Enable Connection Pooling (if desired)
-DATABASES['default']['ENGINE'] = 'django_postgrespool'
+#DATABASES['default']['ENGINE'] = 'django_postgrespool'
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

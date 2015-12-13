@@ -4,12 +4,10 @@
 
 {% block title %}{{ block.super }}Home{% endblock title %}
 
-{% block navbar %}
+{% block navbar_menu %}
     <header id="header" class="alt">
         <nav id="nav">
             <ul>
-                <li class="current"><a href="{% url 'home' %}">Welcome</a></li>
-                <!--<li><a href="#" class="button special">Log In</a></li>-->
                 <li class="current"><a href="{% url 'login' %}">Log In</a></li>
                 <li class="current"><a href="{% url 'signup' %}">Sign Up</a></li>
             </ul>
